@@ -135,21 +135,7 @@ public class NumberTriangle {
         while (line != null) {
 
             // remove when done; this line is included so running starter code prints the contents of the file
-            String[] split = line.split(" ");
-            List<NumberTriangle> cur = new ArrayList<>();
-            for (String s : split) {
-                cur.add(new NumberTriangle(Integer.parseInt(s)));
-            }
-            if (top == null) {
-                top = cur.get(0);
-            }
-            else {
-                for (int i = 0; i < saver.size(); i++) {
-                    saver.get(i).setLeft(cur.get(i));
-                    saver.get(i).setRight(cur.get(i + 1));
-                }
-            }
-            saver = cur;
+
 
             //read the next line
             line = br.readLine();
